@@ -22,7 +22,7 @@ Phone: +92 316-2013553
 Location: Karachi, Pakistan (Remote / Hybrid)
 LinkedIn: https://www.linkedin.com/in/hamzanasir093/
 GitHub: https://github.com/hamza-nasir9/
-Portfolio: https://hamza-nasir-portfolio.vercel.app
+Portfolio: https://hamzanasir.vercel.app
 
 --------------------------------------------------------------------------------
 PROFESSIONAL SUMMARY

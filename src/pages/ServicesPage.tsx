@@ -93,10 +93,10 @@ export const ServicesPage: React.FC = () => {
       <SEOHead
         title="Services & Engineering Capabilities — Hamza Nasir"
         description="Full-stack Web Architecture, Next.js / React Frontend Development, PHP 8 CMS Platforms, and GSAP Cinematic UI engineering."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/services"
+        canonicalUrl="https://hamzanasir.vercel.app/services"
         breadcrumbs={[
-          { name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' },
-          { name: 'Services', url: 'https://hamza-nasir-portfolio.vercel.app/services' },
+          { name: 'Home', url: 'https://hamzanasir.vercel.app/' },
+          { name: 'Services', url: 'https://hamzanasir.vercel.app/services' },
         ]}
         schema={{
           '@context': 'https://schema.org',

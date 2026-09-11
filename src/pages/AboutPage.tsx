@@ -70,10 +70,10 @@ export const AboutPage: React.FC = () => {
       <SEOHead
         title="About Hamza Nasir — 1.5 yrs Frontend Dev / 3 yrs Tech Field"
         description="Learn about Hamza Nasir: 1.5 years of professional frontend development experience, 3 years total in the tech/software field (development + instruction)."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/about"
+        canonicalUrl="https://hamzanasir.vercel.app/about"
         breadcrumbs={[
-          { name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' },
-          { name: 'About', url: 'https://hamza-nasir-portfolio.vercel.app/about' },
+          { name: 'Home', url: 'https://hamzanasir.vercel.app/' },
+          { name: 'About', url: 'https://hamzanasir.vercel.app/about' },
         ]}
       />
 

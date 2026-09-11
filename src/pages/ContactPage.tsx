@@ -105,10 +105,10 @@ export const ContactPage: React.FC = () => {
       <SEOHead
         title="Contact Hamza Nasir — Initiate Project Inquiries & Contracting"
         description="Get in touch with Hamza Nasir for freelance project inquiries, full-stack software development, and technical consulting. Email: hn626309@gmail.com, Phone: +92 316-2013553."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/contact"
+        canonicalUrl="https://hamzanasir.vercel.app/contact"
         breadcrumbs={[
-          { name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' },
-          { name: 'Contact', url: 'https://hamza-nasir-portfolio.vercel.app/contact' },
+          { name: 'Home', url: 'https://hamzanasir.vercel.app/' },
+          { name: 'Contact', url: 'https://hamzanasir.vercel.app/contact' },
         ]}
         schema={{
           '@context': 'https://schema.org',

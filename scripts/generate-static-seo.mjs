@@ -32,7 +32,7 @@ import path from 'node:path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const distDir = path.join(root, 'dist');
-const siteUrl = 'https://hamza-nasir-portfolio.vercel.app';
+const siteUrl = 'https://hamzanasir.vercel.app';
 
 const baseHtml = readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 

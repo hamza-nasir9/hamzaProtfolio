@@ -11,7 +11,7 @@ export const NotFoundPage: React.FC = () => {
       <SEOHead
         title="404 Page Not Found — Hamza Nasir Portfolio"
         description="The page you are looking for does not exist or has been moved. Return to Hamza Nasir's portfolio homepage."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/404"
+        canonicalUrl="https://hamzanasir.vercel.app/404"
       />
 
       <main className="min-h-screen bg-[#08080a] text-slate-100 flex items-center justify-center px-6 md:px-12 py-32">

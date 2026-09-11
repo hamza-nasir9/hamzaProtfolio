@@ -57,10 +57,10 @@ export const WorkPage: React.FC = () => {
       <SEOHead
         title="Selected Works & Case Studies — Hamza Nasir Portfolio"
         description="Explore real freelance client projects and personal software projects built with Next.js, React, PHP, MySQL, MongoDB, and GSAP by Hamza Nasir."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/work"
+        canonicalUrl="https://hamzanasir.vercel.app/work"
         breadcrumbs={[
-          { name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' },
-          { name: 'Work', url: 'https://hamza-nasir-portfolio.vercel.app/work' },
+          { name: 'Home', url: 'https://hamzanasir.vercel.app/' },
+          { name: 'Work', url: 'https://hamzanasir.vercel.app/work' },
         ]}
       />
 

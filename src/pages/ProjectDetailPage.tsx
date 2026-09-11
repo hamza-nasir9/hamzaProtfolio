@@ -62,20 +62,20 @@ export const ProjectDetailPage: React.FC = () => {
       <SEOHead
         title={`${project.title} Case Study — Hamza Nasir`}
         description={project.subtitle}
-        canonicalUrl={`https://hamza-nasir-portfolio.vercel.app/work/${project.slug}`}
+        canonicalUrl={`https://hamzanasir.vercel.app/work/${project.slug}`}
         ogImage={project.ogImage || project.image}
         breadcrumbs={[
-          { name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' },
-          { name: 'Work', url: 'https://hamza-nasir-portfolio.vercel.app/work' },
-          { name: project.title, url: `https://hamza-nasir-portfolio.vercel.app/work/${project.slug}` },
+          { name: 'Home', url: 'https://hamzanasir.vercel.app/' },
+          { name: 'Work', url: 'https://hamzanasir.vercel.app/work' },
+          { name: project.title, url: `https://hamzanasir.vercel.app/work/${project.slug}` },
         ]}
         schema={{
           '@context': 'https://schema.org',
           '@type': 'CreativeWork',
           name: project.title,
           description: project.fullDescription || project.description,
-          image: `https://hamza-nasir-portfolio.vercel.app${project.image}`,
-          url: `https://hamza-nasir-portfolio.vercel.app/work/${project.slug}`,
+          image: `https://hamzanasir.vercel.app${project.image}`,
+          url: `https://hamzanasir.vercel.app/work/${project.slug}`,
           dateCreated: project.year,
           creator: {
             '@type': 'Person',

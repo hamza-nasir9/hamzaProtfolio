@@ -55,8 +55,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenResume }) => {
       <SEOHead
         title="Hamza Nasir — Full-Stack Developer & Digital Product Engineer"
         description="I build high-performance web applications, SaaS platforms, CRM systems, and digital products that solve real business problems."
-        canonicalUrl="https://hamza-nasir-portfolio.vercel.app/"
-        breadcrumbs={[{ name: 'Home', url: 'https://hamza-nasir-portfolio.vercel.app/' }]}
+        canonicalUrl="https://hamzanasir.vercel.app/"
+        breadcrumbs={[{ name: 'Home', url: 'https://hamzanasir.vercel.app/' }]}
       />
 
       <div className="min-h-screen bg-[#08080a] text-slate-100 relative overflow-hidden">
