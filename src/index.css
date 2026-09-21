@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-accent: #a855f7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #08080a;
+    color: #e2e8f0;
+    overflow-x: clip; /* clip prevents body horizontal scrollbar without breaking sticky position */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: #ffffff; /* STRICT: Solid flat color, NO gradient text fill on headings */
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(18, 18, 24, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(26, 26, 36, 0.8);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.15);
+}
+
+.radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.18) 0%, rgba(56, 189, 248, 0.06) 50%, transparent 80%);
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Magnetic / Custom Cursor Utilities */
+@media (pointer: fine) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
