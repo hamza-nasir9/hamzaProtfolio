@@ -200,7 +200,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenResume }) => {
                     // CURRENTLY BUILDING
                   </span>
                   <p className="text-sm md:text-base font-bold text-white tracking-tight">
-                    Architecting Bakrey CRM — an enterprise business management system with Next.js 14, Node.js & MongoDB.
+                    Architecting Bakrey CRM — a secure internal operations & verification platform with Next.js 14, Node.js & MongoDB.
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenResume }) => {
                 </div>
                 <div className="w-px h-8 bg-zinc-800" />
                 <div>
-                  <AnimatedCounter value="06" className="text-2xl md:text-3xl font-bold text-purple-400 block" />
+                  <AnimatedCounter value="08" className="text-2xl md:text-3xl font-bold text-purple-400 block" />
                   <span className="text-[10px] text-zinc-400 uppercase block">Projects Built</span>
                 </div>
               </div>

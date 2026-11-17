@@ -19,6 +19,8 @@ export interface Project {
   featured: boolean;
   keyFeatures: { title: string; desc: string }[];
   architecture: string[];
+  challenges?: { title: string; solution: string }[];
+  aliases?: string[];
 }
 
 export const PROJECTS_DATA: Project[] = [
@@ -27,31 +29,101 @@ export const PROJECTS_DATA: Project[] = [
     id: 'bakrey-crm',
     slug: 'bakrey-crm',
     title: 'Bakrey CRM',
-    subtitle: 'A modern, full-stack CRM and business management system designed to streamline customer relationships, lead tracking, and automated sales pipelines.',
-    category: 'CRM / Business Management System',
+    subtitle: 'A secure internal operations and verification platform for managing business data, tracking every record, and keeping each action accountable, built full-stack with protected data routing and an optimised backend.',
+    category: 'Internal Operations / Verification Platform',
     projectType: 'Client Project',
     year: '2025',
     client: 'Bakrey Systems',
     role: 'Full-Stack Architect & Lead Developer',
-    description: 'Enterprise business management system managing lead tracking, client contact logs, and automated deal pipeline workflows.',
-    fullDescription: "Bakrey CRM is a modern, high-performance Customer Relationship Management platform engineered to replace bloated legacy CRMs with a fast, intuitive Next.js & React 19 interface. The brief called for a system that sales teams could actually use daily without a training manual so the build prioritizes a centralized contact directory, a visual Kanban-style pipeline, and real-time analytics over feature bloat. On the frontend, Next.js 14's App Router pairs with React 19 and Framer Motion to keep navigation between the dashboard, lead lists, and pipeline views instant and animation-smooth, while Tailwind CSS v4 handles a consistent, componentized design system across every screen. The backend runs on a Node.js REST API backed by MongoDB and Mongoose, giving the schema flexibility needed for evolving deal stages, custom lead fields, and activity logs without constant migrations. State is managed with Zustand to keep client-side data flow predictable as more modules are layered in. Core modules contact and lead management, the visual sales pipeline, and deal tracking from first outreach to closed-won are complete and in active use. Currently in progress are task and activity automation (follow-up reminders, email logging, activity timelines) and custom analytics and reporting (sales velocity, revenue forecasting, conversion metrics), with multi-tenant role-based access control planned next so team leads, account managers, and executives each get scoped permissions. Every part of the stack was picked for a reason rather than following a trend: MongoDB's flexible schema absorbs the pipeline's evolving stages without migrations, Zustand keeps client state simple as new modules ship, and the Vercel Edge deployment keeps the interface responsive for sales teams working across different time zones.",
+    description: 'Secure business management and verification platform for internal operations, with protected data routing, record tracking, and an optimised backend.',
+    fullDescription: "Bakrey CRM is a robust business management and verification platform built for internal operations and data tracking. The brief was a system that staff could rely on daily: one place to manage records, verify them, and see exactly what changed and when, without the bloat of a legacy CRM. Security and speed shaped the full-stack architecture. Every request travels through protected API routes with server-side validation, so internal data only reaches the people meant to see it. The backend is a Node.js REST API on MongoDB and Mongoose, with queries and indexes tuned so record lists and workflow views stay responsive as data grows, and a flexible schema that absorbs new fields and workflow stages without migrations. Records move through a verification workflow with a clear status at every step, and every action is logged to give teams a trustworthy history. On the frontend, Next.js 14 App Router, React 19, and Tailwind CSS v4 deliver a consistent, fast interface, with Framer Motion for smooth transitions and Zustand for predictable client state, all deployed on Vercel. Core record management, the visual workflow pipeline, and verification are in active use; activity automation and reporting are in progress, with role-based access control planned next.",
     tags: ['Next.js 14', 'React 19', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     image: '/images/bakrey-crm.jpg',
     ogImage: '/images/og/bakrey-crm-og.jpg',
     liveUrl: 'https://bakrey-crm.vercel.app/',
+    aliases: ['bakery-crm'],
     statusNote: 'In Progress Currently Building',
     featured: true,
     keyFeatures: [
-      { title: 'Contact & Lead Management (Completed)', desc: 'Centralized directory for prospect profiles, interaction history, and custom field tags.' },
-      { title: 'Visual Sales Pipeline (Completed)', desc: 'Interactive Kanban board tracking deal stages from initial outreach to closed won.' },
-      { title: 'Task & Activity Automation (In Progress)', desc: 'Automated follow-up reminders, email logging, and activity timelines for sales reps.' },
-      { title: 'Custom Analytics & Reports (In Progress)', desc: 'Real-time sales velocity charts, revenue forecasting, and lead conversion metrics.' },
-      { title: 'Multi-Tenant RBAC Permissions (Planned)', desc: 'Role-based access control for team leads, account managers, and executive admins.' }
+      { title: 'Secure Data Routing', desc: 'Protected API routes and server-side validation keep internal records private between the interface and the database.' },
+      { title: 'Record Verification Workflow', desc: 'Entries move through clear review states so teams always know which data has been verified and which is pending.' },
+      { title: 'Centralized Records & Data Tracking (Completed)', desc: 'A single directory of records with full interaction history and custom field tags.' },
+      { title: 'Visual Workflow Pipeline (Completed)', desc: 'Interactive Kanban board tracking each item from first entry to completion.' },
+      { title: 'Activity Automation & Reporting (In Progress)', desc: 'Follow-up reminders, activity timelines, and real-time analytics for internal teams.' },
+      { title: 'Role-Based Access Control (Planned)', desc: 'Scoped permissions for team leads, managers, and administrators.' }
     ],
     architecture: [
       'Frontend: Next.js 14 App Router, React 19, TypeScript, Tailwind CSS v4, Framer Motion',
-      'Backend & Database: Node.js REST API with MongoDB database schemas and Mongoose ORM',
+      'Backend & Data: Node.js REST API with protected routes, MongoDB, and Mongoose with optimised queries',
       'Hosting & State: Vercel Edge runtime with Zustand state management'
+    ],
+    challenges: [
+      {
+        title: 'Keeping Internal Business Data Private',
+        solution: 'Structured, protected routing between the interface and the API so only authorised users can reach customer and deal records.'
+      },
+      {
+        title: 'Backend Speed as Records Grow',
+        solution: 'Optimised queries and indexed MongoDB collections keep lead lists and pipeline views responsive as data volume increases.'
+      },
+      {
+        title: 'Reliable Verification & Data Tracking',
+        solution: 'Every lead, deal stage change, and activity is logged against the record, giving internal teams a trustworthy history to verify against.'
+      },
+      {
+        title: 'Evolving Pipeline Stages Without Migrations',
+        solution: 'A flexible Mongoose schema absorbs new deal stages and custom lead fields without rewriting existing data.'
+      }
+    ]
+  },
+  {
+    id: 'alkausar-bakers',
+    slug: 'alkausar-bakers',
+    title: 'Al Kausar Bakers',
+    subtitle: 'A high-performance bakery e-commerce platform with dynamic menu categories, custom item photo management, and optimised product-to-order flows.',
+    category: 'E-Commerce / Bakery Website',
+    projectType: 'Client Project',
+    year: '2026',
+    client: 'Al Kausar Bakers Sweets And Nimco',
+    role: 'Full-Stack Developer',
+    description: 'Luxury storefront for a Karachi bakery and sweet shop with a category-driven menu, custom cake ordering, bulk orders, and a WhatsApp cart.',
+    fullDescription: "Al Kausar Bakers Sweets And Nimco is a family bakery and sweet shop in Saudabad, Malir, Karachi, and this platform gives it an online storefront that feels as premium as its mithai. The brief was a fast, elegant e-commerce experience where customers can browse the full menu, customise a cake, place a bulk order for weddings and events, and check out without friction. The frontend is built on Next.js App Router with Tailwind CSS, deployed on Vercel, so pages load quickly on the mobile connections most customers use. The menu is organised into dynamic categories, which means new items and sections can be added as data rather than code changes, and a custom item photo management flow keeps every product image consistent and optimised across the catalog. The ordering flow was designed around how local customers actually buy: a global cart drawer collects items and sends the complete order to the shop on WhatsApp, avoiding a payment-gateway dependency while still giving the bakery a clean, itemised order message. Dedicated pages cover a custom cake builder (flavour, size, toppings, and a personalised cake name, confirmed over WhatsApp), bulk orders by weight for weddings and celebrations, plus About and Contact pages with location details. Cinematic motion with GSAP and smooth scrolling is layered on top of a clean white and royal-gold design system, while an Express and MongoDB backend handles the data behind the menu.",
+    tags: ['Next.js', 'Tailwind CSS', 'Express.js', 'MongoDB', 'GSAP', 'Three.js', 'Vercel'],
+    image: '/images/alkausar-bakers.jpg',
+    ogImage: '/images/og/alkausar-bakers-og.jpg',
+    liveUrl: 'https://alkausar-bakery.vercel.app',
+    statusNote: 'Production Live',
+    featured: true,
+    keyFeatures: [
+      { title: 'Dynamic Menu Categories', desc: 'Category-driven menu where sections and items are managed as data, so the catalog grows without code changes.' },
+      { title: 'Custom Item Photo Management', desc: 'Consistent, optimised product imagery handled per item so every menu card stays sharp and fast.' },
+      { title: 'Optimised Product Flows', desc: 'A short path from browsing a category to a confirmed order, tuned for mobile shoppers.' },
+      { title: 'WhatsApp Cart Drawer', desc: 'Global cart that sends the full itemised order straight to the shop on WhatsApp.' },
+      { title: 'Custom Cake Builder', desc: 'Pick a flavour, size, and toppings, add a personalised cake name, and confirm the details over WhatsApp.' },
+      { title: 'Bulk Order Flow', desc: 'Dedicated ordering for custom mithai and wedding quantities by weight.' }
+    ],
+    architecture: [
+      'Frontend: Next.js App Router, Tailwind CSS, GSAP, Framer Motion, Three.js (react-three-fiber)',
+      'Backend & Database: Node.js with Express and MongoDB via Mongoose',
+      'Hosting: Vercel deployment with Git-based CI/CD'
+    ],
+    challenges: [
+      {
+        title: 'Taking Orders Without a Payment Gateway',
+        solution: 'Built a global cart drawer that formats the order into a clean WhatsApp message, matching how local customers already buy.'
+      },
+      {
+        title: 'A Large, Image-Heavy Menu',
+        solution: 'Category-driven menu structure with managed item photos keeps browsing quick even with many products.'
+      },
+      {
+        title: 'Luxury Motion Without Hurting Speed',
+        solution: 'Kept animation and rich visuals scoped to the experiences that need them, so core menu pages stay light.'
+      },
+      {
+        title: 'Frequent Menu Changes',
+        solution: 'Menu items and categories live in the database, so the bakery can update offerings without a code deployment.'
+      }
     ]
   },
   {

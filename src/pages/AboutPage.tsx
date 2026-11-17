@@ -110,7 +110,7 @@ export const AboutPage: React.FC = () => {
 
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10">
                   <div className="font-bold text-white text-sm font-heading">Hamza Nasir</div>
-                  <div className="text-xs font-mono text-purple-400">San Francisco, CA — Full-Stack Engineer</div>
+                  <div className="text-xs font-mono text-purple-400">Pakistan Karachi, CA — Full-Stack Engineer</div>
                 </div>
               </div>
             </ScrollReveal>

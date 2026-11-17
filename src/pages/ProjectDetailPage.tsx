@@ -12,6 +12,7 @@ import {
   Clock,
   Compass,
   Hammer,
+  ShieldCheck,
 } from 'lucide-react';
 import { PROJECTS_DATA, Project } from '../data/projectsData';
 import { SEOHead } from '../components/SEOHead';
@@ -27,7 +28,7 @@ export const ProjectDetailPage: React.FC = () => {
   const [simLog, setSimLog] = useState<string[]>([]);
 
   useEffect(() => {
-    const found = PROJECTS_DATA.find((p) => p.slug === slug || p.id === slug);
+    const found = PROJECTS_DATA.find((p) => p.slug === slug || p.id === slug || p.aliases?.includes(slug ?? ''));
     if (found) {
       setProject(found);
       window.scrollTo(0, 0);
@@ -142,6 +143,11 @@ export const ProjectDetailPage: React.FC = () => {
                   <span>VIEW LIVE PROJECT</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
+              )}
+              {project.liveUrl && (
+                <span className="text-xs font-mono text-zinc-500 break-all">
+                  {project.liveUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                </span>
               )}
               {project.githubUrl && (
                 <a
@@ -269,6 +275,37 @@ export const ProjectDetailPage: React.FC = () => {
                 </article>
               </ScrollReveal>
             ))}
+          </section>
+        )}
+
+        {project.challenges && project.challenges.length > 0 && (
+          <section className="mb-16 space-y-6" aria-label="Challenges Solved">
+            <ScrollReveal>
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-purple-400 uppercase tracking-widest block">
+                  // CHALLENGES SOLVED
+                </span>
+                <LineClipReveal>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-heading">
+                    Problems I Had to Solve
+                  </h2>
+                </LineClipReveal>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.challenges.map((item, idx) => (
+                <ScrollReveal key={idx} delay={idx * 0.08}>
+                  <article className="h-full p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-purple-500/40 transition-colors space-y-3">
+                    <div className="flex items-start gap-2 text-purple-400 font-mono text-xs font-bold">
+                      <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
+                      <span>0{idx + 1}. {item.title}</span>
+                    </div>
+                    <p className="text-xs text-zinc-400 font-sans leading-relaxed">{item.solution}</p>
+                  </article>
+                </ScrollReveal>
+              ))}
+            </div>
           </section>
         )}
 
